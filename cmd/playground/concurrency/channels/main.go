@@ -14,6 +14,8 @@ func main() {
 	go func() {
 		wg.Done()
 		messages <- "Hello World!"
+		message := <-messages
+		fmt.Println(message)
 	}()
 	wg.Wait()
 
