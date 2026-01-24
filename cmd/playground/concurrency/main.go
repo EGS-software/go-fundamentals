@@ -9,5 +9,5 @@ func main() {
 		fmt.Printf("HI!!")
 	}()
 
-	fmt.Println("Fim da Main")
+	fmt.Println("Fim da Main") // Is faster than the "go func" above
 }
