@@ -14,10 +14,11 @@ func main() {
 	go func() {
 		wg.Done()
 		messages <- "Hello World!"
-		message := <-messages
-		fmt.Println(message)
 	}()
 	wg.Wait()
+
+	message := <-messages
+	fmt.Println(message)
 
 	fmt.Printf("The End!")
 }
