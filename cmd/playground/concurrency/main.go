@@ -12,13 +12,14 @@ func main() {
 
 	fmt.Println("Fim da Main") // Is faster than the "go func" above
 
-	var wg sync.WaitGroup
+	// counters:
+	var wg sync.WaitGroup // Created var wg of type sync.WaitGroup
 
-	wg.Add(1)
+	wg.Add(1) // Add one goroutine to the counter
 	go func() {
-		defer wg.Done()
+		defer wg.Done() // Decrease the counter by one when the goroutine completes
 		fmt.Printf("Hello from goroutine!")
 	}()
-	wg.Wait()
+	wg.Wait() // Wait until the counter is zero
 	fmt.Printf("The End!")
 }
