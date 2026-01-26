@@ -15,5 +15,5 @@ func (p PaymentSlip) Process(data string) string {
 }
 
 func (p PaymentSlip) CalcData(value float64) float64 {
-	return value * 1.05
+	return value * 1.05 // Example: adding 5% processing fee
 }
