@@ -9,11 +9,11 @@ type PaymentSlip struct {
 	amount float64
 }
 
-func (p PaymentSlip) Process(data string) string {
+func (p PaymentSlip) Process(Data string) string {
 	fmt.Print("Starting Payment Slip Processing...\n")
-	return fmt.Sprintf("Payment Slip Processed: %s", data)
+	return fmt.Sprintf("Payment Slip Processed: %s", Data)
 }
 
-func (p PaymentSlip) CalcData(value float64) float64 {
-	return value * 1.05 // Example: adding 5% processing fee
+func (p PaymentSlip) CalcData(Value float64) float64 {
+	return Value * 1.05 // Example: adding 5% processing fee
 }
