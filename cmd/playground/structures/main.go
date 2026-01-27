@@ -15,7 +15,9 @@ func main() {
 		Name:      "MyCalcApp",
 	}
 
-	resultText := calcApp.Processor.Process("Data for Payment Slip")
-	calc := calcApp.Processor.CalcData(200.0)
-	fmt.Printf("Name: "+resultText+"CalcValue: %.2f\n", calc)
+	func returnData(value float64) string {
+		resultText := calcApp.Processor.Process("Data for Payment Slip")
+		calc := calcApp.Processor.CalcData(	200.0)
+		return fmt.Printf("Name: "+resultText+"CalcValue: %.2f\n", calc)
+	}()
 }
