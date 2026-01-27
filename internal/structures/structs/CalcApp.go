@@ -5,7 +5,7 @@ import (
 )
 
 type CalcApp struct {
-	processor interfaces.Processor
-	id        int
-	name      string
+	Processor interfaces.Processor
+	Id        int
+	Name      string
 }
