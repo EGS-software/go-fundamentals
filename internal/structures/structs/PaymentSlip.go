@@ -5,8 +5,8 @@ import (
 )
 
 type PaymentSlip struct {
-	id     int
-	amount float64
+	Id     int
+	Amount float64
 }
 
 func (p PaymentSlip) Process(Data string) string {
