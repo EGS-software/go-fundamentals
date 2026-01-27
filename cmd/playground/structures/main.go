@@ -1,8 +1,8 @@
 package main
 
 import (
-	"setup/internal/structures/structs"
-	"setup/internal/structures/interfaces"
 	"fmt"
+	"setup/internal/structures/interfaces"
+	"setup/internal/structures/structs"
 	"sync"
 )
