@@ -11,7 +11,7 @@ type CalcApp struct {
 	Name      string
 }
 
-func (c CalcApp) CalcApp(value float64) string {
+func (c CalcApp) Calc(value float64) string {
 	resultText := c.Processor.Process("Data for Payment Slip")
 	calc := c.Processor.CalcData(value)
 
