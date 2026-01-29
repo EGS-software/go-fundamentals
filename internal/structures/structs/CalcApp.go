@@ -13,8 +13,11 @@ type CalcApp struct {
 
 func (c CalcApp) Calc(value float64) string {
 	resultText := c.Processor.Process("Data for Payment Slip")
-	calc := c.Processor.CalcData(value)
+	calc, err := c.Processor.CalcData(value)
 
+	if err != nil {
+		return "Error in calculation: " + err.Error()
+	}
 	result := "Name: " + resultText + " | " + "CalcValue: " + strconv.FormatFloat(calc, 'f', 2, 64)
 	return result
 }
