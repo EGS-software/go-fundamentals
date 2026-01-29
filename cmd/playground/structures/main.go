@@ -15,7 +15,7 @@ func main() {
 		Name:      "MyCalcApp",
 	}
 
-	result := calcApp.Calc(100.0)
+	result := calcApp.Calc(paymentSlip.Amount)
 
 	fmt.Println(result)
 }
