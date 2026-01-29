@@ -15,7 +15,12 @@ func main() {
 		Name:      "MyCalcApp",
 	}
 
-	result := calcApp.Calc(paymentSlip.Amount)
+	result, err := calcApp.Calc(paymentSlip.Amount)
+
+	if err != nil {
+		fmt.Println("Error:", err)
+		fmt.Println("The generic result is:", result)
+	}
 
 	fmt.Println(result)
 }
