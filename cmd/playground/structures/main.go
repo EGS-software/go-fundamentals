@@ -7,7 +7,7 @@ import (
 
 func main() {
 	// Using the PaymentSlip struct which implements the Processor interface
-	paymentSlip := structs.PaymentSlip{Id: 1, Amount: 100.0}
+	paymentSlip := structs.PaymentSlip{Id: 1, Amount: -100.0}
 
 	calcApp := structs.CalcApp{
 		Processor: paymentSlip,
@@ -18,9 +18,9 @@ func main() {
 	result, err := calcApp.Calc(paymentSlip.Amount)
 
 	if err != nil {
-		fmt.Println("Error:", err)
-		fmt.Println("The generic result is:", result)
+		fmt.Println("Critical Error:", err)
+		return
 	}
 
-	fmt.Println(result)
+	fmt.Println("Success: ", result)
 }
