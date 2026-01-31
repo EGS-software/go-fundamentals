@@ -6,8 +6,8 @@ import (
 )
 
 type PaymentSlip struct {
-	Id     int
-	Amount float64
+	Id     int     `json:"id"`
+	Amount float64 `json:"amount"`
 }
 
 // Process Implementing the Processor interface methods for PaymentSlip
