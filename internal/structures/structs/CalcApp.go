@@ -1,6 +1,7 @@
 package structs
 
 import (
+	"fmt"
 	"setup/internal/structures/interfaces"
 	"strconv"
 )
@@ -16,7 +17,7 @@ func (c CalcApp) Calc(value float64) (string, error) {
 	calc, err := c.Processor.CalcData(value)
 
 	if err != nil {
-		return "" + err.Error(), err
+		return "", fmt.Errorf("erro no cálculo da app %s: %w", c.Name, err)
 	}
 	result := "Name: " + resultText + " | " + "CalcValue: " + strconv.FormatFloat(calc, 'f', 2, 64)
 	return result, nil
