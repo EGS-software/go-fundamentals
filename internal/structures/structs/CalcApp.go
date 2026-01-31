@@ -16,7 +16,7 @@ func (c CalcApp) Calc(value float64) (string, error) {
 	calc, err := c.Processor.CalcData(value)
 
 	if err != nil {
-		return "Error in calculation: " + err.Error(), err
+		return "" + err.Error(), err
 	}
 	result := "Name: " + resultText + " | " + "CalcValue: " + strconv.FormatFloat(calc, 'f', 2, 64)
 	return result, nil
